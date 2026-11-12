@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+ 
+        .container {
+            display: flex;
+            background-color: #0a0a0a;
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+ 
+        .left {
+            flex: 1;
+            padding: 60px;
+            background: linear-gradient(to bottom right, #d32f2f, #fbc02d); /* Gradient from dark red to bright yellow */
+            border-radius: 10px 0 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+ 
+        .left h1 {
+            font-size: 48px;
+            color: #fff; /* White color for contrast */
+            margin-bottom: 20px;
+        }
+ 
+        .left p {
+            font-size: 18px;
+            color: #fff; /* White color for contrast */
+        }
+ 
+        .right {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            overflow-y: auto; /* Ensures scrolling if content overflows */
+            max-height: 100vh; /* Prevents the panel from exceeding viewport height */
+            background-color: #000000;
+        }
+        .service {
+            background-color: #222222; /* Dark background for hazard theme */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Adds smoothness to interaction */
+        }
+        .service .logo {
+            margin-bottom: 10px;
+        }
+ 
+        .service .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+ 
+        .service:hover {
+            background-color: #444444;  /* Slightly lighter dark background on hover */
+        }
+ 
+        .service h3 {
+            color: #ff4500; /* Bright orange color for headings, fitting for a hazard theme */
+        }
+ 
+        .service p {
+            color: #ccc;
+            font-size: 16px;
+            max-height: 0;
+            overflow: hidden; /* Hides overflowing text */
+            transition: max-height 0.3s ease; /* Smooth expansion/collapse */
+            margin-top: 10px;
+           
+        }  
+ 
+        .service.active p {
+            max-height: 200px; /* Adjust based on content length */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const services = document.querySelectorAll(".service");
+ 
+            services.forEach(service => {
+                service.addEventListener("click", function() {
+                    // Collapse other services
+                    services.forEach(s => {
+                        if (s !== service) s.classList.remove("active");
+                    });
+ 
+                    // Toggle the clicked service
+                    this.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>OUR SERVICES</h1>
+            <p>Our services offer a complete suite of solutions for vegetation management, utilizing AI and machine learning to enhance safety, sustainability, and decision-making. From detecting hazards and plant diseases to providing precise weather forecasts and plant identification, we empower users with actionable insights. Our tools, including a report generator and 24/7 AI chatbot, simplify vegetation health monitoring and risk assessment, ensuring efficient and informed management.</p>
+        </div>
+        <div class="right">
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/Hazard.jpg " alt="Service 01 Logo">
+                </div>
+                <h3>HAZARD DETECTION</h3>
+                <p>Our Hazard Detection service utilizes advanced machine learning algorithms to identify potential risks posed by vegetation. By analyzing satellites and normal imagery and environmental data, our system can detect overgrown trees, branches near power lines, and other hazards. This helps municipalities, utility companies, and land managers proactively address vegetation-related threats, ensuring safety and reducing the risk of fires, power outages, or other disruptions.</p>
+            </div>
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/disease.jpg" alt="Service 02 Logo">
+                </div>
+                <h3>DISEASE PREDICTION</h3>
+                <p>This advanced application leverages artificial intelligence to identify plant diseases through detailed analysis of leaf images. Users can upload images of affected plant leaves, which are then processed by a state-of-the-art AI model trained to recognize patterns associated with various diseases. The system efficiently handles image processing and classification, delivering accurate results within seconds.</p>
+            </div>
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/weather.jpg" alt="Service 03 Logo">
+                </div>
+                <h3>WEATHER PREDICTION</h3>
+                <p>Our Weather Prediction service provides precise and real-time weather forecasts tailored to the needs of vegetation management. Using advanced AI, we offer forecasts for temperature, humidity, precipitation, and wind patterns that impact plant growth and health. This helps in planning irrigation schedules, pest control, and other vegetation management activities more effectively.</p>
+            </div>
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/plant.jpg" alt="Service 04 Logo">
+                </div>
+                <h3>PLANT DETECTION</h3>
+                <p>Plant Name Prediction uses AI and APIs to identify plants in images using ai and api. It enhances the accuracy by connecting to extensive plant databases. The system provides the plant name, scientific classification, and related details. It helps users effortlessly identify and learn about plants from a single image.</p>
+            </div>
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/report1.jpg" alt="Service 05 Logo">
+                </div>
+                <h3>REPORT GENERATOR</h3>
+                <p>Our Report Generator simplifies the process of generating comprehensive reports on vegetation health and hazard assessments. By aggregating data from hazard detection, disease prediction, and weather predictions, this service allows stakeholders to generate customized reports with actionable insights. These reports can be used for documentation, decision-making, and regulatory compliance, streamlining the management of vegetation and environmental resources.</p>
+            </div>
+            <div class="service">
+                <div class="logo">
+                    <img src="service imgs/bot.jpg" alt="Service 06 Logo">
+                </div>
+                <h3>CHATBOT</h3>
+                <p>The Chatbot service offers users an intuitive and interactive way to access information and support related to vegetation management. Whether you're seeking advice on plant care, information about local hazards, or help guiding in generating a report, our AI-powered chatbot provides quick, accurate responses. Available 24/7, it ensures that you have the tools and information you need to make informed decisions about your vegetation management efforts.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

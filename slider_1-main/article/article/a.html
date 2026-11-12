@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles & Guides</title>
+    <style>
+        /* CSS for the page layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Black background for a bold look */
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF; /* White text for high contrast */
+        }
+    
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #16A085; /* Vibrant teal for a striking header */
+            text-align: center;
+            padding: 30px;
+            background-color: #E8F8F5; /* Light teal for freshness */
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .subheader {
+            font-size: 22px;
+            color: #27AE60; /* Bright green for the subheader */
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+    
+        .tab {
+            padding: 10px 20px;
+            background-color: #1ABC9C; /* Bold teal for tabs */
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            color: white; /* White text for contrast */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .tab:hover {
+            background-color: #80CBC4; /* Slightly darker teal for hover */
+            color: white;
+        }
+    
+        .tab-content {
+            display: none;
+            margin-top: 30px;
+        }
+    
+        .tab-content.active {
+            display: block;
+        }
+    
+        .article, .news-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    
+        .article img, .news-item img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border: 2px solid #16A085; /* Teal border for visual appeal */
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .article-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #a8c8e7; /* Elegant navy blue for article titles */
+        }
+    
+        .article-snippet, .news-summary {
+            font-size: 16px;
+            color: #7F8C8D; /* Neutral grey for subtle text */
+        }
+    
+        .expandable {
+            margin: 20px 0;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #2ECC71; /* Bright green for expandables */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .expandable:hover {
+            background-color: #27AE60; /* Darker green for hover */
+            color: #F3F8EE; /* Light green text */
+        }
+    
+        .pdf-download {
+            margin-top: 10px;
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+
+    <div class="title">Articles & Guides</div>
+    <div class="subheader">Explore insights, strategies, and the latest updates on vegetation hazard detection and management.</div>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('articles')">Educational Articles</div>
+        <div class="tab" onclick="showTab('guides')">Guides</div>
+        <div class="tab" onclick="showTab('news')">News</div>
+    </div>
+
+    <!-- Educational Articles Tab Content -->
+    <div id="articles" class="tab-content">
+        <h2>Educational Articles</h2>
+        <p>Dive into in-depth analysis and expert insights.</p>
+        <div class="article">
+            <img src="a1.jpg" alt="Article 1 Image">
+            <div>
+                <a href="https://harvardtechnologyreview.com/2024/09/15/the-role-of-ai-in-wildfire-risk-prediction-mitigation-and-management" class="article-title" target="_blank">The Role of AI in Wildfire Risk Prediction, Mitigation, and Management</a>
+                <p class="article-snippet">Discover how AI is transforming the way we detect and manage vegetation hazards.</p>
+                <a href="https://harvardtechnologyreview.com/2024/09/15/the-role-of-ai-in-wildfire-risk-prediction-mitigation-and-management" target="_blank">Read More →</a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="a2.jpg" alt="Article 2 Image">
+            <div>
+                <a href="https://delair.aero/power-utilities/simplifying-vegetation-management-for-power-lines-with-drones-digital-twins-and-artificial-intelligence/" class="article-title" target="_blank">Simplifying vegetation management for power lines with drones, digital twins and artificial intelligence</a>
+                <p class="article-snippet">Revolutionize vegetation management with drones, digital twins, and AI, enabling precise detection and proactive handling of power line hazards.</p>
+                <a href="https://delair.aero/power-utilities/simplifying-vegetation-management-for-power-lines-with-drones-digital-twins-and-artificial-intelligence/" target="_blank">Read More →</a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="a3.jpg" alt="Article 3 Image">
+            <div>
+                <a href="https://www.flai.ai/post/power-grid-vegetation-analysis-with-lidar-and-ai" class="article-title" target="_blank">Power Grid Vegetation Analysis with LiDAR and AI</a>
+                <p class="article-snippet">Explore how LiDAR and AI are revolutionizing power grid vegetation analysis, ensuring safer and more efficient hazard management.</p>
+                <a href="https://www.flai.ai/post/power-grid-vegetation-analysis-with-lidar-and-ai" target="_blank">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guides Tab Content -->
+    <div id="guides" class="tab-content">
+        <h2>Step-by-Step Guides</h2>
+        <p>Practical steps to detect, assess, and manage vegetation hazards.</p>
+        <div class="expandable" onclick="togglePDF('guide1')">📘 How to Use Our Detection Tool</div>
+        <div id="guide1" class="pdf-download" style="display:none;">
+            <a href="HOW TO USE DETECTION TOOL.pdf" download>Download PDF</a>
+        </div>
+        <div class="expandable" onclick="togglePDF('guide2')">📘 Curious About Our Findings?</div>
+        <div id="guide2" class="pdf-download" style="display:none;">
+            <a href="HOW TO USE DETECTION TOOL.pdf" download>Download PDF</a>
+        </div>
+        <div class="expandable" onclick="togglePDF('guide3')">📘 Creating a Vegetation Management Plan</div>
+        <div id="guide3" class="pdf-download" style="display:none;">
+            <a href="Vegetation_Management_Plan_Steps.pdf" download>Download PDF</a>
+        </div>
+    </div>
+
+    <!-- News Tab Content -->
+    <div id="news" class="tab-content">
+        <h2>Latest News</h2>
+        <p>Stay updated with current events and technology trends.</p>
+        <div class="news-item">
+            <img src="n1.jpg" alt="News Image 1">
+            <div>
+                <p><strong>Sep 24, 2024</strong></p>
+                <a href="https://www.power-grid.com/td/outage-management/utility-vegetation-management-integrating-ai-and-digital-twins-for-enhanced-safety-and-reliability/" target="_blank">Utility vegetation management: Integrating AI and digital twins for enhanced safety and reliability</a>
+                <p class="news-summary">This tool leverages AI to detect hazardous vegetation in real-time.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <img src="n2.jpg" alt="News Image 2">
+            <div>
+                <p><strong>Aug 20, 2024</strong></p>
+                <a href="https://www.smart-energy.com/industry-sectors/new-technology/californian-vegetation-experts-have-improved-powerline-inspections-with-satellites-and-ai/" target="_blank">Californian vegetation experts have improved powerline inspections with satellites and AI</a>
+                <p class="news-summary">Experts discuss effective methods for wildfire prevention.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tab) {
+            var contents = document.querySelectorAll('.tab-content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(tab).classList.add('active');
+        }
+
+        function togglePDF(guideId) {
+            var guide = document.getElementById(guideId);
+            if (guide.style.display === "none") {
+                guide.style.display = "block";
+            } else {
+                guide.style.display = "none";
+            }
+        }
+
+        // Show the first tab by default
+        showTab('articles');
+    </script>
+</body>
+</html>

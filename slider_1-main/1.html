@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('contactusback.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+ 
+        /* Contact Us Heading */
+        .page-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+ 
+        /* Form Section */
+        .form-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+        }
+ 
+        .form-section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+ 
+        .form-section label {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+ 
+        .form-section input,
+        .form-section textarea {
+            width: calc(100% - 50px); /* Leaves space for the label */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+ 
+        .form-section input::placeholder,
+        .form-section textarea::placeholder {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+ 
+        .form-section textarea {
+            height: 100px;
+        }
+ 
+        .form-section button {
+            width: 100%;
+            padding: 10px;
+            background: #7774eb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+ 
+        .form-section button:hover {
+            background: #9face6;
+        }
+ 
+        /* Contact Info Section */
+        .contact-info {
+            background: rgba(255, 255, 255, 0.8); /* Translucent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #444;
+        }
+ 
+        .contact-info strong {
+            font-weight: bold;
+        }
+ 
+        .contact-info span {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div class="form-section">
+            <p>We'd love to hear from you! Please fill out the form below and let us know your thoughts.</p>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" placeholder="Your Feedback" required></textarea>
+                </div>
+                <button type="button" onclick="generateCSV()">Send Feedback</button>
+            </form>
+        </div>
+    </div>
+ 
+    <script>
+        function generateCSV() {
+            // Get the values from the form
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var feedback = document.getElementById('feedback').value;
+ 
+            // Create the CSV data
+            var csvData = "Name,Email,Feedback\n"; // Header row
+            csvData += `${name},${email},${feedback}\n`; // Data row
+ 
+            // Create a temporary anchor tag to trigger the CSV download
+            var hiddenElement = document.createElement('a');
+            hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvData);
+            hiddenElement.target = '_blank';
+            hiddenElement.download = 'user_feedback.csv'; // The name of the CSV file
+            hiddenElement.click(); // Trigger the download
+ 
+            // Optionally clear the form after submission
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
+ 

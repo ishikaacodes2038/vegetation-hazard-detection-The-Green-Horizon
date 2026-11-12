@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Initially hide the carousel */
+        .carousel {
+            display: none;
+        }
+        .fullscreen-video {
+            position: fixed;
+            top: 0;
+            left: 10;
+            width: 138%;
+            height: 100%;
+            z-index: 10;
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="fullscreen-video">
+        <video id="introVideo" autoplay muted>
+            <source src="assets/img/output(crop-video.com).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+      <nav>
+        <img class="Navimg" src="image (13).png" alt="Logo">
+        <a href="#">Home</a>
+        <a href="file:///C:/Users/SAKVINAY/Desktop/vegetation%20front/slider_1-main/1.html" target="_blank">Contacts</a>
+        <a href="file:///C:/Users/SAKVINAY/Desktop/vegetation%20front/service.html" target="_blank">Services</a>
+      </nav>
+    </header>
+
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="power-lines-532720_1920.jpg">
+                <div class="content">
+                    <div class="title">The</div>
+                    <div class="topic">Green Horizon</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Detecting overgrowth near power lines is critical for ensuring safety and preventing disruptions. Advanced systems monitor vegetation encroachment to identify potential hazards. By addressing risks early, they minimize outages and protect surrounding communities. This proactive approach ensures infrastructure reliability and environmental care.
+                    </div>
+                    <div class="buttons">
+                        <button>Get Started</button>
+                        <button>Our Services</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="wind-power-1357419_1920.jpg">
+                <div class="content">
+                    
+                    <div class="title">The</div>
+                    <div class="topic">Green Horizon</div>
+                    <div class="des">
+                      Overgrowth near power lines is detected using advanced imaging and sensor technologies. These systems monitor vegetation patterns, identifying areas at risk of interference or fire hazards. The collected data helps in targeted management to mitigate dangers. This method ensures efficient hazard prevention while maintaining continuous power supply.
+                    </div>
+                    <div class="buttons">
+                        <button>Get Started</button>
+                        <button>Our Services</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="sunset-3442835_1920.jpg">
+                <div class="content">
+                    <div class="title">The </div>
+                    <div class="topic">Green Horizon</div>
+                    <div class="des">
+                      Vegetation overgrowth near power lines is detected and managed to safeguard communities and infrastructure. Monitoring tools identify risks like branches encroaching on power lines. Preventive actions reduce the chance of fires, outages, and safety issues. This ensures reliable electricity and peace of mind for all stakeholders.
+                    </div>
+                    <div class="buttons">
+                        <button>Get Started</button>
+                        <button>Our Services</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="forest-fire-432870.jpg">
+                <div class="content">
+                    <div class="title">The </div>
+                    <div class="topic">Green Horizon</div>
+                    <div class="des">
+                      Detecting overgrowth near power lines promotes a sustainable balance between safety and environmental care. Monitoring systems pinpoint areas of concern, addressing hazards without unnecessary vegetation loss. This minimizes fire risks while protecting ecosystems and infrastructure. The approach prioritizes safety and ecological harmony.
+                    </div>
+                    <div class="buttons">
+                        <button>Get Started</button>
+                        <button>Our Services</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="power-lines-532720_1920.jpg">
+            </div>
+            <div class="item">
+                <img src="wind-power-1357419_1920.jpg">
+            </div>
+            <div class="item">
+                <img src="sunset-3442835_1920.jpg">
+            </div>
+            <div class="item">
+                <img src="forest-fire-432870.jpg">
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <div class="img">
+              <img src="assets/img/Free mariguana plant medicinal illustration.png" alt="Front Image 1">
+            </div>
+            <div class="front-content">
+              <p class="p1">Detect diseases in plants efficiently and accurately</p>
+              <div class="description">
+                <a href="http://localhost:8502/" class="card__button" target="_blank">
+                  Get Started <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="back">
+            <div class="back-content">
+              <div class="img2">
+              <img src="assets/img/diseases.jpg" alt="Back Image 1">
+              <strong>Green Eye</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="card">
+          <div class="content">
+            <div class="front">
+              <div class="img">
+                <img src="assets/img/w.jpg" alt="Front Image 1">
+              </div>
+              <div class="front-content">
+                <p class="p2">Real-time weather prediction dashboard</p>
+                <div class="description">
+                  <a href="http://localhost:8503/" class="card__button" target="_blank">
+                    Get Started <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-content">
+                <div class="img2">
+                <img src="assets/img/weathepred.jpg" alt="Back Image 1">
+                <strong>Sky Watch</strong>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="content">
+            <div class="front">
+              <div class="img">
+                <img src="assets/img/chatbot.jpg" alt="Front Image 1">
+              </div>
+              <div class="front-content">
+                <p class="p3">A 24/7 accessible chatbot ready to answer your questions in your preferred language</p>
+                <div class="description">
+                  <a href="http://localhost:8501/" class="card__button">
+                    Get Started <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-content">
+                <div class="img2">
+                <img src="assets/img/chatbot_1.jpg" alt="Back Image 1">
+                <strong>Eco Buddy</strong>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="content">
+            <div class="front">
+              <div class="img">
+                <img src="Premium AI Image _ Forest Fire.jpeg" alt="Front Image 1">
+              </div>
+              <div class="front-content">
+                <p class="p4">Detect hazard and Outage Risk around powerlines</p>
+                <div class="description">
+                  <a href="http://localhost:8501/" class="card__button" target="_blank">
+                    Get Started <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-content">
+                <div class="img2">
+                <img src="assets/img/forestfire_2.jpg" alt="Back Image 1">
+                <strong>Hazard Detection</strong>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+    
+    </div>
+  </body>
+
+    <script src="app.js"></script>
+
+    <script>
+        // JavaScript to handle video and carousel transition
+        const introVideo = document.getElementById('introVideo');
+        const carousel = document.querySelector('.carousel');
+        const videoContainer = document.querySelector('.fullscreen-video');
+
+        // Hide the video and show the carousel after video ends
+        introVideo.addEventListener('ended', () => {
+            videoContainer.style.display = 'none'; // Hide the video container
+            carousel.style.display = 'block'; // Show the carousel
+        });
+    </script>
+
+
+
+<div id="chat-icon" onclick="openChat()">
+  <img src="bot.jpg" alt="Chat Icon">
+</div>
+
+<div id="chat-interface">
+  <div id="chat-header">
+    <h3>Chat Assistant</h3>
+    <button onclick="closeChat()">X</button>
+  </div>
+ 
+  <div id="chat-body">
+    <!-- Chat messages will go here -->
+  </div>
+ 
+  <div id="language-selector">
+    <label for="language">Select Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="kn">Kannada</option>
+      <option value="bn">Bengali</option>
+      <option value="mr">Marathi</option>
+      <option value="te">Telugu</option>
+      <option value="ta">Tamil</option>
+      <option value="gu">Gujarati</option>
+      <option value="ur">Urdu</option>
+      <option value="or">Odia</option>
+      <option value="ml">Malayalam</option>
+    </select>
+  </div>
+ 
+  <div id="chat-footer">
+    <input type="text" id="chat-input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <!-- New voice button -->
+    <button id="voice-button" onclick="startVoiceRecognition()">🎤</button>
+  </div>
+</div>
+
+<script>
+  // Existing JavaScript
+  function openChat() {
+    document.getElementById('chat-interface').style.display = 'block';
+  }
+
+  function closeChat() {
+    document.getElementById('chat-interface').style.display = 'none';
+  }
+
+  function sendMessage(message = null) {
+    const input = document.getElementById('chat-input');
+    const text = message || input.value; // Use provided message or input field value
+    const language = document.getElementById('language').value;
+
+    if (text.trim() !== '') {
+      const chatBody = document.getElementById('chat-body');
+     
+      // Add the user message to chat
+      const newMessage = document.createElement('div');
+      newMessage.textContent = text;
+      newMessage.classList.add('user-message');
+      chatBody.appendChild(newMessage);
+      input.value = '';
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // Call the Flask backend to get the assistant's response with selected language
+      fetch('http://127.0.0.1:5000/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: text, language: language }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        const assistantMessage = document.createElement('div');
+        assistantMessage.textContent = data.response;
+        assistantMessage.classList.add('assistant-message');
+        chatBody.appendChild(assistantMessage);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        const assistantMessage = document.createElement('div');
+        assistantMessage.textContent = 'Sorry, there was an error processing your request.';
+        assistantMessage.classList.add('assistant-message');
+        chatBody.appendChild(assistantMessage);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      });
+    }
+  }
+
+  // Keyboard input handling
+  document.getElementById('chat-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  });
+
+  // Voice recognition functionality
+  function startVoiceRecognition() {
+  // Get the selected language from the language dropdown (or set a default language)
+      const selectedLanguage = document.getElementById('language').value;
+     
+      // Map of language codes for different languages
+      const languageMap = {
+          'en': 'en-US',     // English
+          'hi': 'hi-IN',     // Hindi
+          'kn': 'kn-IN',     // Kannada
+          'bn': 'bn-IN',     // Bengali
+          'mr': 'mr-IN',     // Marathi
+          'te': 'te-IN',     // Telugu
+          'ta': 'ta-IN',     // Tamil
+          'gu': 'gu-IN',     // Gujarati
+          'ur': 'ur-IN',     // Urdu
+          'or': 'or-IN',     // Odia            
+          'ml': 'ml-IN',     // Malayalam
+
+      };
+
+      // Get the corresponding language code
+      const recognitionLang = languageMap[selectedLanguage] || 'en-US'; // Default to English if no match
+
+      // Initialize speech recognition with the selected language
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = recognitionLang;
+
+      recognition.onstart = function() {
+          console.log('Voice recognition started');
+      };
+
+      recognition.onresult = function(event) {
+          const transcript = event.results[0][0].transcript;
+          console.log('Recognized text: ' + transcript);
+          sendMessage(transcript); // Send recognized text to chat (or handle it as needed)
+      };
+
+      recognition.onerror = function(event) {
+          console.error('Error occurred: ' + event.error);
+      };
+
+      recognition.start();  // Start voice recognition
+  }
+
+</script>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="imgcont">
+<img src="image (13).png" alt="">
+
+  </div>
+
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#" target="_blank">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="http://localhost:8504/" target="_blank">About Us</a></li>
+    <li class="menu__item"><a class="menu__link" href="file:///C:/Users/SAKVINAY/Desktop/vegetation%20front/slider_1-main/article/article/a.html" target="_blank">Articles and More         </a></li>
+    <li class="menu__item"><a class="menu__link" href="file:///C:/Users/SAKVINAY/Desktop/vegetation%20front/slider_1-main/1.html" target="_blank">Contact Us</a></li>
+
+  </ul>
+
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+</body>
+</html>
